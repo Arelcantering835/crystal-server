@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>crystal-server</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Protobuf Include="Auth\auth.proto" GrpcServices="Server" />
+        <Protobuf Include="Beacons\beacons.proto" GrpcServices="Server" />
+        <Protobuf Include="Listeners\listeners.proto" GrpcServices="Server" />
+        <Protobuf Include="Tasks\tasks.proto" GrpcServices="Server" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="9.3.1" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.76.0" />
+        <PackageReference Include="MediatR" Version="14.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.4" />
+    </ItemGroup>
+
+</Project>
